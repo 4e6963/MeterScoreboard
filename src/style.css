@@ -1,0 +1,19 @@
+:root {
+
+    --main-bg-color: #242424;
+    --card-bg-color: #4e4e4e;
+    --text-color: #e0e0e0;
+    --text-size: 1rem;
+
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: var(--text-size);
+    font-weight: 400;
+
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
