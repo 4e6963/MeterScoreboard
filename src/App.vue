@@ -59,5 +59,6 @@ onMounted(() => {
   height: 2rem;
   width: 2rem;
   margin: 1rem;
+  user-select: none;
 }
 </style>
