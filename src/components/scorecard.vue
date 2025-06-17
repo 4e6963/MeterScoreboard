@@ -75,7 +75,10 @@ function deletePrompt() {
   <div class="card"
        v-if="!!association"
        @click="leftClick"
-       @contextmenu.prevent="decrease">
+       @contextmenu.prevent="decrease"
+       @keyup.up="increase"
+       @keyup.space="increase"
+       @keyup.down="decrease">
     <div v-if="!editMode" class="name">{{ association?.name }}</div>
     <input type="text" v-if="editMode"
            ref="nameInput"
@@ -103,6 +106,10 @@ function deletePrompt() {
   margin: .5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.card:focus-visible {
+  outline: var(--text-color) solid 0.01rem;
 }
 
 input {
