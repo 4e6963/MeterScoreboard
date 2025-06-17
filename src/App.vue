@@ -59,7 +59,8 @@ onMounted(() => {
   align-items: center;
   height: 2rem;
   width: 2rem;
-  margin: 1rem;
+  margin: .5rem;
   user-select: none;
+  font-weight: bold;
 }
 </style>

@@ -100,8 +100,9 @@ function deletePrompt() {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1rem;
-  padding: 1rem;
+  margin: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 input {
