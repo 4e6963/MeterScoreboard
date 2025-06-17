@@ -104,6 +104,10 @@ function deletePrompt() {
   padding: 1rem;
 }
 
+input {
+  font-size: 2rem;
+}
+
 .name {
   font-size: 2rem;
 }
