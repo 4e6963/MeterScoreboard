@@ -37,7 +37,8 @@ onMounted(() => {
 
 <template>
   <div class="card-grid">
-    <scorecard v-for="association in associations"
+    <scorecard v-for="(association, i) in associations"
+               :tabindex="i + 1"
                :association="association"
                @changed="saveScores"
                @delete="deleteAssociation(association)"/>
