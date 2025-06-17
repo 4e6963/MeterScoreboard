@@ -15,10 +15,16 @@ const nameInput = ref(null);
 const editMode = ref(false)
 
 function leftClick(e: MouseEvent) {
-  if (e.ctrlKey || e.metaKey) {
-    editMode.value = true
+  if(e.shiftKey && (e.ctrlKey || e.metaKey)) {
+    deletePrompt()
     return
   }
+
+  if (!e.shiftKey && (e.ctrlKey || e.metaKey)) {
+    enableEditMode()
+    return
+  }
+
   increase()
 }
 
@@ -39,7 +45,7 @@ function decrease() {
 }
 
 function disableEditMode() {
-  editMode.value = false
+  setTimeout(() => editMode.value = false, 100) //delay to not increase counter when blur click
 }
 
 function enableEditMode() {
@@ -68,8 +74,6 @@ function deletePrompt() {
 <template>
   <div class="card"
        v-if="!!association"
-       @click.ctrl.prevent.stop="enableEditMode"
-       @click.ctrl.shift.prevent.stop="deletePrompt"
        @click="leftClick"
        @contextmenu.prevent="decrease">
     <div v-if="!editMode" class="name">{{ association?.name }}</div>
